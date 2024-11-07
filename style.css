@@ -79,7 +79,7 @@ nav ul li a{
     display: flex;
     flex-direction: column;
 }
-.home-screen-slider span{
+.home-screen-slider .slider-number{
     font-size: 180px;
     line-height: 140px;
     color: transparent;
@@ -158,29 +158,25 @@ nav ul li a{
     transform: rotate(270deg);
     position: absolute; /* Абсолютное позиционирование */
     bottom: 120px; /* Расстояние от нижнего края */
-    right: -160px;
+    right: -90px;
 }
 .nft-collection span {
-    font-size: 24px;
-    line-height: 24px;
-    color: #fff;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 600;
+    color: #000000;
     display: inline-block;
 }
-
 /*Nft-collection-section*/
-.section-nft-collection{
+.container-nft{
     position: relative;
+    padding: 10% 5%;
     display: flex;
-    padding: 40px;
-}
-.container-about{
-    position: relative;
-    padding: 30px 5%;
+    flex-direction: column;
 }
 .subtitle{
     font-size: 48px;
     font-weight: 600;
-    padding: 10px 5%;
     color: white;
 }
 .subtitle-2 {
@@ -192,16 +188,33 @@ nav ul li a{
     font-weight: 700;
     background-color: #fc3;
     color: #000;
-    margin-left: 5%;
-    margin-right: 5%;
 }
-
-.layer{
-    font-size: 24px;
-    font-weight: 700;
-    background-image: url(Images/Nftcol1.png);
+.images {
     display: flex;
     justify-content: flex-start;
-    background-size: cover;
-    background-repeat: no-repeat;
+    align-items: center;
+    gap: 20px; 
+}
+
+.images img {
+    max-width: 100%;
+    height: auto;
+}
+.letter{
+    font-size: 40px;
+    line-height: 20px;
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    z-index: 0;
+    color: transparent;
+    -webkit-text-stroke: 1.5px #fff;
+}
+.container-nft button{
+    align-self: flex-end;
+    padding: 12px 18px;
+    margin-top: 20px; 
+    background: transparent;
+    border: 3px solid #ffffff;
+    text-decoration: none;
 }
