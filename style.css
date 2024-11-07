@@ -158,7 +158,7 @@ nav ul li a{
     transform: rotate(270deg);
     position: absolute; /* Абсолютное позиционирование */
     bottom: 120px; /* Расстояние от нижнего края */
-    right: -160px; /* Расстояние от правого края */
+    right: -160px;
 }
 .nft-collection span {
     font-size: 24px;
