@@ -208,9 +208,10 @@ nav ul li a{
     display: flex;
     flex-direction: column;
 }
-.image4{
+.image-row .image4{
     width: 320px;
     height: 400px;
+    position: relative;
 }
 .letter{
     font-size: 40px;
