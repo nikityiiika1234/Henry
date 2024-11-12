@@ -1,24 +1,21 @@
-/*General*/
-* {
+/*General--------------------------------------------------------------------------*/
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html, body {
+html, body{
     width: 100%;
-    overflow-x: hidden; /* Отключает горизонтальную прокрутку */
+    overflow-x: hidden;
     background: #080808;
     color: #fff;
-}
-span, p, button, li, h1, h2, h3, h4, h5, h6, div{
     font-family: "Poppins", serif;
 }
 .container{
     position: relative;
     padding: 30px 5%;
 }
-
-/*Background*/
+/*Background-----------------------------------------------------------------------*/
 .background-triangle{
     position: absolute;
     top: 0;
@@ -31,11 +28,9 @@ span, p, button, li, h1, h2, h3, h4, h5, h6, div{
     background-repeat: no-repeat;
     z-index: 0;
 }
-
-/*Header*/
+/*Header--------------------------------------------------------------------------*/
 #header {
     width: 100%;
-    position: relative;
 }
 nav{
     display: flex;
@@ -48,23 +43,16 @@ nav{
 }
 nav ul li{
     display: inline-block;
-    list-style: none;
     margin: 10px 20px;
+    list-style: none;
 }
 nav ul li a{
     color: #080808;
     text-decoration: none;
     font-size: 18px;
-    position: relative;
     font-weight: 700;
 }
-.point{
-    width: 100%;
-    margin-top: -30%;
-    margin-left: -30px;
-}
-
-/*Section home-screen*/
+/*Section home-screen----------------------------------------------------------------*/
 .home-screen-slider{
     position: relative;
     display: flex;
@@ -101,7 +89,6 @@ nav ul li a{
 .home-screen-slider button{
     align-self: flex-start;
     padding: 12px 18px;
-    margin-bottom: 40px;
     background: transparent;
     border: 3px solid #DB0A40;
 }
@@ -127,12 +114,9 @@ nav ul li a{
     border-radius: 100px;
     opacity: .5;
 }
-.home-screen-slider-nav li.active{
+.home-screen-slider-nav li.active, .home-screen-slider-nav li:hover {
     opacity: 1;
-}
-.home-screen-slider-nav li:hover{
     background-color: #fff;
-    opacity: 1;
     cursor: pointer;
 }
 .home-screen-slider-sidemenu{
@@ -156,8 +140,8 @@ nav ul li a{
     display: flex;
     flex-direction: column;
     transform: rotate(270deg);
-    position: absolute; /* Абсолютное позиционирование */
-    bottom: 120px; /* Расстояние от нижнего края */
+    position: absolute; 
+    bottom: 120px; 
     right: -90px;
 }
 .nft-collection span {
@@ -167,18 +151,23 @@ nav ul li a{
     color: #000000;
     display: inline-block;
 }
-/*Nft-collection-section*/
+/*Nft-collection-section------------------------------------------------------------------*/
 .container-nft{
     position: relative;
     display: flex;
     flex-direction: column;
+}
+.containernft{
+    display: flex;
+    flex-direction: column;
+    padding: 4% 5%;
 }
 .subtitle{
     font-size: 48px;
     font-weight: 600;
     color: white;
 }
-.subtitle-2 {
+.subtitle-2{
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -188,28 +177,9 @@ nav ul li a{
     background-color: #fc3;
     color: #000;
 }
-.image-row {
+.image-row{
     display: flex;
     flex-wrap: wrap;
-    padding: 0% 0%;
-    margin: 0;
-}
-.image-row > img {
-    margin-top: 136px; /* Вы можете настроить значение отступа по своему усмотрению */
-}
-.image-row img {
-    width: 320px;
-    height: 263px;
-    margin-right: 30px; 
-}
-.image-row img:last-child {
-    margin-bottom: 0;
-}
-.containernft{
-    position: relative;
-    padding: 4% 5%;
-    display: flex;
-    flex-direction: column;
 }
 .image-row .image4{
     width: 300px;
@@ -218,9 +188,12 @@ nav ul li a{
     margin-bottom: 100px;
     z-index: 1;
 }
-.image4 img {
-    width: 100%;
-    height: auto;
+.image4{
+    width: 357px;
+    height: 400px;
+    position: relative;
+    margin-bottom: 100px;
+    z-index: 1;
 }
 .image4 .letter{
     position: absolute;
@@ -235,71 +208,68 @@ nav ul li a{
     text-transform: uppercase;
     white-space: nowrap;
 }
-.container-nft button{
-    align-self: flex-end;
-    padding: 12px 18px;
-    margin-bottom: 50px;
-    margin-right: 230px;
-    background: transparent;
-    border: 3px solid #ffffff;
-    text-decoration: none;
-}
-button a {
-    color: white;
-    text-decoration: none;
-}
-/* Стили для контейнера стрелок */
-.arrows-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-}
-.arrows-images {
+.arrows-images{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-/* Стили для изображений стрелок */
-.nftcontainer-arrow img{
-filter: brightness(0) invert(1); /* Делает черные изображения белыми */
-width: 24px;
-height: auto;
-margin: 0 30px; /* Расстояние между стрелками */
-position: absolute;
-display: flex;
-bottom: 61%;
-right: 36%;
-cursor: pointer;
-}
-.nftcontainer-arrow-back img{
-    filter: brightness(0) invert(1); /* Делает черные изображения белыми */
+.nftcontainer-arrow img, .nftcontainer-arrow-back img{
+    filter: brightness(0) invert(1);
     width: 24px;
     height: auto;
-    margin: 0 30px; /* Расстояние между стрелками */
+    margin: 0 30px;
     position: absolute;
     display: flex;
     bottom: 61%;
-    right: 34%;
+    right: 40%;
     cursor: pointer;
 }
+.nftcontainer-arrow-back img{
+    transform: scaleX(-1);
+    bottom: 61%;
+    right: 38%;
+}
 /* Отразить изображение для создания правой стрелки */
-.nftcontainer-arrow-back img {
-    transform: scaleX(-1); /* Отражает изображение по горизонтали */
+.nftcontainer-arrow-back img{
+    transform: scaleX(-1);
 }
 /*----------------------------------------------------------------------------------*/
-/* Стили строки карточек */
-.card-row {
+.card-row-1{
     display: flex;
     gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin-top: 160px;
+    margin-right: 20px;
 }
-
-/* Стили карточки с фоновым изображением */
-.card {
+.card{
     width: 300px;
+    height: 263px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 6px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 15px;
+}
+.card-content h2{
+    font-size: 24px;
+    font-weight: 700;
+    margin: 5px 0;
+}
+.card-content p{
+    font-size: 14px;
+    font-weight: 400;
+    margin: 5px 0;
+}
+.price{
+    font-size: 16px;
+    font-weight: 700;
+    color: #FDB926;
+}
+.card4{
+    width: 357px;
     height: 400px;
     background-size: cover;
     background-position: center;
@@ -308,48 +278,485 @@ cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: relative;
     display: flex;
-    align-items: flex-end; /* Выравниваем текст внизу */
+    align-items: flex-end;
     padding: 15px;
 }
-
-/* Полупрозрачный слой поверх фона */
-.card::before {
-    content: "";
+.button{
+    padding: 12px 18px;
+    margin-bottom: 50px;
+    margin-right: 230px;
+    align-self: flex-end;
+    background: transparent;
+    border: 3px solid #ffffff;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+}
+/*Season-Headlights---------------------------------------------------------------------------*/
+.season-highlights{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    padding: 50px;
+    overflow: hidden;
+    background-color: #000000;
+}
+.highlight-title h3{
+    font-size: 32px;
+    color: #FDB926;
+    font-weight: 600;
+}
+.highlight-subtitle h2{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.highlight-description p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #ffffff;
+}
+.background-blur{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Тёмный слой с прозрачностью */
+    background-image: url('Images/Rectangle\ 11.png');
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+    z-index: 0;
+}
+.highlight-content{
+    position: relative;
+    left: 50px;
+    z-index: 3;
+    color: #fff;
+    max-width: 40%;
+}
+.highlight-title{
+    font-size: 24px;
+    position: absolute;
+    margin-top: -60%;
+    color: #FDB926;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+.highlight-subtitle{
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.highlight-description{
+    font-size: 16px;
+    font-weight: 400;
+    color: #cccccc;
+}
+/* изображение справа */
+.highlight-image {
+    width: 929px;
+    height: 587px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    z-index: 2;
+}
+/*Media-News--------------------------------------------------------------*/
+.media-news{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 100px;
+}
+.medianews{
+    position: relative;
+    padding: 4% 5%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+}
+.medianews .subtitle{
+    font-size: 48px;
+    font-weight: 600;
+    position: absolute;
+    top: 140px;
+    left: 450px;
+    color: white;
+    z-index: 2;
+}
+.medianews .subtitle-2{
+    position: absolute;
+    top: 120px;
+    left: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    font-size: 14px;
+    font-weight: 700;
+    background-color: #fc3;
+    color: #000;
+    z-index: 2;
+}
+.letter2{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    font-size: 55px;
+    padding: 100px 0px;
+    line-height: normal;
+    color: transparent;
+    -webkit-text-stroke: .3px #fff;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.image-row-media{
+    display: flex;
+    gap: 20px;
+    margin-top: 150px;
+}
+.image4-media, .card-row-1-media{
+    display: flex;
+    gap: 20px;
+}
+.image4-media{
+    width: 357px;
+    height: 400px;
+    display: flex;
+    align-items: flex-start;
+    margin-top: -10%; 
+}
+.card4-media, .card-media{
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+.card4-media{
+    width: 357px;
+    height: 400px;
+}
+.card-media{
+    width: 357px;
+    height: 263px;
+}
+.card-content-media{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
     z-index: 1;
 }
-
-/* Контент карточки */
-.card-content {
-    position: relative;
-    z-index: 2; /* Поверх полупрозрачного слоя */
+.time-media{
+    font-size: 14px;
+    color: #FDB926;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.arrows-images-media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.media-arrow img, .media-arrow-back img{
+    filter: brightness(0) invert(1);
+    width: 24px;
+    height: auto;
+    margin: 0 30px;
+    position: absolute;
+    display: flex;
+    bottom: 61%;
+    right: 7%;
+    cursor: pointer;
+}
+.media-arrow-back img{
+    transform: scaleX(-1);
+    bottom: 61%;
+    right: 5%;
+}
+.button-media{
+    padding: 12px 18px;
+    background: transparent;
+    border: 3px solid #ffffff;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    position: absolute;
+    top: 100%;
+    left: 8%;
+    margin-top: 20px;
+}
+/*------------Бренды_------------------------------------------------------------------------*/
+.brands-section{
+    text-align: center;
+    padding: 50px;
+    background-color: #000000;
+    margin-top: 100px;
+}
+.section-title{
+    font-size: 36px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+.brands-images{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+.brand-logo{
+    flex: 1;
+    max-width: 200px;
+}
+.brand-logo img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+/*-------------------Social-media_---------------------------------------------------------------------*/
+#social-section{
+    background-color: #000;
+    padding: 50px;
+    display: flex;
+    border-radius: 12px;
+    justify-content: center;
+}
+.text-and-icons{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+}
+.social-title{
+    font-size: 48px;
+    font-weight: 700;
     color: #fff;
+    background-color: #000;
+    padding: 5px 10px;
+    margin-right: 30px;
+}
+.icons .fa-twitter, .icons .fa-tiktok{
+    color: transparent;
+    -webkit-text-stroke: 2px #000000;
+}
+.icons a{
+    color: #000000;
+    font-size: 32px;
+    margin-left: 30px;
+    text-decoration: none;
+    transition: color 1s;
+}
+.left-side{
+    position: absolute;
+    left: 0%;
+}
+.social-content{
+    position: relative;
     text-align: center;
 }
-
-.card-content h2 {
-    font-size: 20px;
+.icons .fa-instagram:hover{
+    color: #e1306c;
+}
+.icons .fa-twitter:hover{
+    color: #1DA1F2;
+}
+.icons .fa-tiktok:hover{
+    color: #69C9D0;
+}
+/*----------Foooter_---------------------------------------------------------------------*/
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 100px;
+    background-color: #000000;
+    color: white;
+    font-size: 14px;
+}
+.footer-links a{
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+.footer-info p{
+    font-size: 14px;
+}
+.footer-powered p{
+    font-size: 14px;
+}
+.footer-powered .powered-name{
+    color: #FDB926;
     font-weight: 700;
-    margin: 10px 0 5px;
 }
-
-.card-content p {
-    font-size: 14px;
-    margin: 5px 0;
+/*Адаптация------------------------------------------------------ */
+@media (max-width: 768px) {
+    /* Header */
+    #header{
+        padding: 10px 0;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li{
+        margin: 5px 0;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+    /* Home Screen Slider */
+    .home-screen-slider{
+        flex-direction: column;
+        padding: 20px;
+        background-size: cover;
+    }
+    .home-screen-slider .slider-number{
+        font-size: 80px;
+        line-height: 80px;
+    }
+    .home-screen-slider h1, .home-screen-slider h2{
+        font-size: 24px;
+        padding: 5px;
+    }
+    .home-screen-slider h2{
+        margin-bottom: 20px;
+    }
+    .home-screen-slider button{
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    /* NFT Collection */
+    .subtitle{
+        font-size: 36px;
+    }
+    .image-row, .card-row-1{
+        flex-direction: column;
+        align-items: center;
+    }
+    .card, .card4{
+        width: 90%;
+        height: auto;
+    }
+    /* Season Highlights */
+    .season-highlights{
+        flex-direction: column;
+        padding: 20px;
+    }
+    .highlight-title h3, .highlight-subtitle h2{
+        font-size: 24px;
+    }
+    .highlight-image{
+        width: 100%;
+        height: auto;
+    }
+    /*----------------------------------------*/
+    /* Brands Section */
+    .brands-section{
+        padding: 20px;
+    }
+    .section-title{
+        font-size: 24px;
+    }
+    .brands-images{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .brand-logo{
+        max-width: 150px;
+        margin: 0 auto;
+    }
+    /* Social Media */
+    #social-section{
+        padding: 30px 5%;
+    }
+    .social-title{
+        font-size: 24px;
+        text-align: center;
+    }
+    .text-and-icons{
+        flex-direction: column;
+        align-items: center;
+    }
+    .icons a{
+        font-size: 24px;
+        margin: 5px;
+    }
+    /* Footer */
+    .footer{
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    .footer-links{
+        margin-bottom: 10px;
+    }
+    .footer-info, .footer-powered{
+        font-size: 12px;
+    }
 }
-
-.price {
-    font-size: 16px;
-    font-weight: bold;
-    color: #f8c537;
-}
-
-.usd-price {
-    color: #aaa;
-    font-size: 14px;
+/* Медиазапрос для больших экранов */
+@media (min-width: 1440px){
+    /* Header */
+    .logo{
+        width: 60px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    /* Home Screen Slider */
+    .home-screen-slider{
+        padding: 60px;
+    }
+    .home-screen-slider .slider-number{
+        font-size: 220px;
+        line-height: 160px;
+    }
+    .home-screen-slider h1, .home-screen-slider h2{
+        font-size: 56px;
+        padding: 15px;
+    }
+    .home-screen-slider button{
+        padding: 16px 24px;
+        font-size: 20px;
+    }
+    /* NFT Collection */
+    .subtitle{
+        font-size: 56px;
+    }
+    /* Season Highlights */
+    .highlight-title h3{
+        font-size: 36px;
+    }
+    .highlight-subtitle h2{
+        font-size: 28px;
+    }
+    .highlight-image{
+        width: 1100px;
+        height: 700px;
+    }
+    /* Social Media */
+    .social-title{
+        font-size: 56px;
+    }
+    .icons a{
+        font-size: 40px;
+    }
+    /* Footer */
+    .footer{
+        padding: 80px 120px;
+        font-size: 16px;
+    }
 }
